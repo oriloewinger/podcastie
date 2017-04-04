@@ -1,3 +1,14 @@
+.PodListExample img{
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
 .podtitlelist {
-    float=left;
+    float:left;
+    
+}
+
+.EPtitlelist {
+    float: left;
 }

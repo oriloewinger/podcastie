@@ -52,6 +52,6 @@ table {
 img {
   height:120px;
   width:120px;
-
+  display: block
   margin: 0px;
 }

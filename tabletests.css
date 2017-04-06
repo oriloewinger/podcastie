@@ -3,6 +3,15 @@ img {
     width:100px;
 }
 
-row0 {
-    font-size: 40px;
+.row0 {
+    font-size: 20px;
+    
+}
+
+.rowtext {
+    margin-left:10px;
+}
+
+.rowtextform {
+    color: gray;
 }

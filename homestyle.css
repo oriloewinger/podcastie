@@ -1,14 +1,16 @@
-.PodListExample img{
-    height: 100px;
-    width: 100px;
-
+.fa fa-play-circle {
+    color: black;
 }
 
-.podtitlelist {
-    float: left;
-    
+.playNew {}
+
+.imgNew img {
+    height: 50px;
+    width: 50px;
 }
 
-.EPtitlelist {
-    float: left;
+.rowTextNew {}
+
+.epNew {
+    color: gray;
 }

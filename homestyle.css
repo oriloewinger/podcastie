@@ -1,16 +1,21 @@
-.fa fa-play-circle {
-    color: black;
-}
 
-.playNew {}
+
+.playNew {
+    color: black;
+    font-size: 40px;
+}
 
 .imgNew img {
     height: 50px;
     width: 50px;
+    margin: 10px;
 }
 
-.rowTextNew {}
+.rowTextNew {
+    font-weight: 600;
+}
 
 .epNew {
-    color: gray;
+    color: #4b4e51;
+    font-weight: 400;
 }

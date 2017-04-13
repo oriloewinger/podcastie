@@ -1,5 +1,3 @@
-
-
 .playNew {
     color: black;
     font-size: 40px;
@@ -18,4 +16,9 @@
 .epNew {
     color: #4b4e51;
     font-weight: 400;
+}
+
+.userPodImg img {
+    height: 50px; 
+    width: 50px;
 }

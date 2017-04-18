@@ -22,3 +22,30 @@
     height: 100px; 
     width: 100px;
 }
+
+.pod-container {
+    background: red;
+    height: 400px;
+    display: flex;
+}
+
+.pod-newlist {
+    background: teal;
+}
+
+.pod-userpods {
+    background: yellow;
+}
+
+.pod-newitem {
+    display: flex;
+}
+
+.pod-playbar {
+    height: 60px;
+    display: flex;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    bottom: 0px;
+}

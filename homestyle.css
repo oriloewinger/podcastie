@@ -9,6 +9,11 @@
     margin: 10px;
 }
 
+.form-control{
+    width: 20%;
+    margin-top: 10px;
+}
+
 .rowTextNew {
     font-weight: 600;
 }

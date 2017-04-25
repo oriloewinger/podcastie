@@ -55,123 +55,56 @@
         </div>
       </div>
 
-      <div>
-        <div class="container">
-          <div class="player text-center">
-            <button type="button" id="button_fbw" class="btn" onclick='buttonRewindPress()'>
-              <i class="fa fa-fast-backward"></i>
-            </button>
-            
-            <button type="button" id="button_bw" class="btn" onclick='buttonBackPress()'>
-              <i class="fa fa-backward"></i>
-            </button>
-            
-            <button type="button" id="button_play" class="btn" onclick='buttonPlayPress()'>
-              <i class="fa fa-play"></i>
-            </button>
-            
-            <button type="button" id="button_stop" class="btn" onclick='buttonStopPress()'>
-              <i class="fa fa-stop"></i>
-            </button>
-            
-            <button type="button" id="button_fw" class="btn" onclick='buttonForwardPress()'>
-              <i class="fa fa-forward"></i>
-            </button>
-            
-            <button type="button" id="button_ffw" class="btn" onclick='buttonFastforwardPress()'>
-              <i class="fa fa-fast-forward"></i>
-            </button>
-
-            <div></div>
-
-            <audio controls="controls">
-              <source src="track.ogg" type="audio/ogg" />
-              <source src="track.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
+      <div class="control-player">
+        <button type="button" id="btnPlay" class="btn">
+            <i id="iconControl" class="fa fa-play"></i>
+        </button>
       </div>
 
-     <!--
-      <table class= "tableNew">
-        <tr>
-          <td class="playNew">
-            <i class="fa fa-play-circle" aria-hidden="true"></i>
-          </td>
-          <td class="imgNew">
-            <img src = "">
-          </td>
-          <td class="rowTextNew">
-            <p>
-              Podcast Name <br/><span class= "epNew">Episode Name</span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td class="playNew">
-            <i class="fa fa-play-circle" aria-hidden="true"></i>
-          </td>
-          <td class="imgNew">
-            <img src = "">
-          </td>
-          <td class="rowTextNew">
-            <p>
-              Podcast Name <br/><span class= "epNew">Episode Name</span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td class="playNew">
-            <i class="fa fa-play-circle" aria-hidden="true"></i>
-          </td>
-          <td class="imgNew">
-            <img src = "">
-          </td>
-          <td class="rowTextNew">
-            <p>
-              Podcast Name <br/><span class= "epNew">Episode Name</span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td class="playNew">
-            <i class="fa fa-play-circle" aria-hidden="true"></i>
-          </td>
-          <td class="imgNew">
-            <img src = "">
-          </td>
-          <td class="rowTextNew">
-            <p>
-              Podcast Name <br/><span class= "epNew">Episode Name</span>
-            </p>
-          </td>
-        </tr>
-      </table>
-      <table class = "userPod">
-        <tr class = "userPodRow">
-          <td><img class = "userPodImg" src = "http://bit.ly/2p7ZRyY"></td>
-          <td><img class = "userPodImg" src = "http://bit.ly/2opHp2n"></td>
-        </tr>
-        <tr class = "userPodRow">
-          <td><img class = "userPodImg" src = "http://bit.ly/2oAJQRQ"></td>
-          <td><img class = "userPodImg" src = "http://bit.ly/2pvmZ7l"></td>
-        </tr>
-        <tr class = "userPodRow">
-          <td><img class = "userPodImg" src = "http://bit.ly/2o7cVRO"></td>
-          <td><img class = "userPodImg" src = "http://n.pr/2o7XqrR"></td>
-        </tr>
-        <tr class = "userPodRow">
-          <td><img class = "userPodImg" src = "http://bit.ly/2opPfc0"></td>
-          <td><img class = "userPodImg" src = "http://bit.ly/2o7Cx0I"></td>
-        </tr>
-        <tr class = "userPodRow">
-          <td><img class = "userPodImg" src = "http://bit.ly/2nGjJK0"></td>
-          <td><img class = "userPodImg" src = "http://bit.ly/2o7Y5th"></td>
-        </tr>
-      </table>
-      -->
+      <div id="podList" class="pod-list">
+
+        <div class="pod-item" data-url="music.mp3">
+          8-Punk
+        </div>
+
+        <div class="pod-item" data-url="rickroll.mp3">
+          8-Punk
+        </div>
+
+      </div>
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script>
+        (function(){
+            var currentPod = new Audio("music.mp3");
+            var btnPlay = document.getElementById("btnPlay");
+            var btnPause = document.getElementById("btnPause");
+            var iconControl = document.getElementById("iconControl");
+            var podList = document.getElementId("pod-list")
+            btnPlay.addEventListener("click", function(e){
+              // Check if song is playing
+              // btn-playing tells us if the song is currently playing
+              var isPlaying = btnPlay.classList.contains('btn-playing');
+              // Pause if playing, play is paused
+              isPlaying ? pause() : play();
+              // Toggle playing class
+              btnPlay.classList.toggle("btn-playing");
+            });
+
+            function play() {
+              currentPod.play();
+              iconControl.classList.remove("fa-pause");
+              iconControl.classList.add("fa-play");
+            }
+
+            function pause() {
+              currentPod.pause();
+              iconControl.classList.remove("fa-play");
+              iconControl.classList.add("fa-pause");          
+            }
+        }());
+        
+      </script>
   </body>
 </html>

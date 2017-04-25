@@ -1,17 +1,17 @@
 .newpod-container {
     display: flex;
     flex-direction: row;
-    
     background-color: mistyrose;
     width: 100%; 
     flex-wrap: wrap;
-    
+    /*margin: 40px, 0px, 40px, 0px;*/
+    /*WHY DOESN'T the margin werk*/
 }
 
 .artwork {
     width: 100px;
     height: 100px;
-    background-color: gray;
+    background-color: skyblue;
 }
 
 .text-container {

@@ -56,8 +56,14 @@
       </div>
 
       <div class="control-player">
+        <button type="button" id="btnPreviousTrack" class="btn">
+            <i class="fa fa-step-backward" aria-hidden="true"></i>
+        </button>
         <button type="button" id="btnPlay" class="btn">
             <i id="iconControl" class="fa fa-play"></i>
+        </button>
+        <button type="button" id="btnNextTrack" class="btn">
+            <i class="fa fa-step-forward" aria-hidden="true"></i>
         </button>
       </div>
 
@@ -80,8 +86,14 @@
             var currentPod = new Audio("music.mp3");
             var btnPlay = document.getElementById("btnPlay");
             var btnPause = document.getElementById("btnPause");
+            var btnNextTrack = document.getElementById("btnNextTrack");
+            var btnPreviousTrack = document.getElementById("btnPreviousTrack");
             var iconControl = document.getElementById("iconControl");
-            var podList = document.getElementId("pod-list")
+            var podList = document.getElementById("pod-list")
+            var playList = ["music.mp3","rickroll.mp3"];
+            var currentTrackIndex = 0;
+            var currentFileName = playList[0];
+  
             btnPlay.addEventListener("click", function(e){
               // Check if song is playing
               // btn-playing tells us if the song is currently playing
@@ -91,6 +103,37 @@
               // Toggle playing class
               btnPlay.classList.toggle("btn-playing");
             });
+
+            btnNextTrack.addEventListener("click", function(e){
+              nextTrack();
+            });
+
+            function nextTrack() {
+              incrementTrackIndex();
+              var foo = new Audio("rickroll.mp3");
+              currentPod.pause();
+              // pause currentPod
+              // set currentFileName = playList[currentTrackIndex];
+              // set currentPod = new Audio(currentFileName);
+
+              console.log(currentTrackIndex);
+            }
+            function incrementTrackIndex() {
+              currentTrackIndex++;
+            }
+
+            btnPreviousTrack.addEventListener("click", function(e){
+              previousTrack();
+            })
+
+            function previousTrack() {
+              decrementTrackIndex();
+              play();
+              console.log(currentTrackIndex);
+            }
+            function decrementTrackIndex() {
+              currentTrackIndex--;
+            }
 
             function play() {
               currentPod.play();

@@ -1,56 +1,8 @@
-body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.playNew {
-    color: black;
-    font-size: 40px;
-}
-
-.imgNew img {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
-}
-
 .form-control{
     width: 20%;
     margin-top: 10px;
 }
 
-.rowTextNew {
-    font-weight: 600;
-}
-
-.epNew {
-    color: #4b4e51;
-    font-weight: 400;
-}
-
-.userPodImg {
-    height: 100px; 
-    width: 100px;
-}
-
-.pod-container {
-    background: red;
-    height: 400px;
-    display: flex;
-}
-
-.pod-newlist {
-    background: teal;
-}
-
-.pod-userpods {
-    background: yellow;
-}
-
-.pod-newitem {
-    display: flex;
-}
 
 .pod-playbar {
     height: 60px;
@@ -76,4 +28,48 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+
+
+
+
+
+.mega-container {
+    display: flex;
+    background-color: red;
+}
+
+.newpod-container {
+    display: flex;
+    flex-direction: row;
+    background-color: mistyrose;
+    width: 100%; 
+    flex-wrap: wrap;
+}
+
+.newartwork {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    flex-wrap: wrap;
+
+}
+
+.text-container p {
+    margin-right: 0px, 10px, 0px, 10px;
+}
+
+.newtext {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    
 }

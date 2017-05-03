@@ -1,3 +1,11 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*.navbar-default {
+    background-color: black;
+}*/
+
 .form-control{
     width: 20%;
     margin-top: 10px;
@@ -36,12 +44,21 @@
     justify-content: space-around;
 }
 
+.megamega-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .mega-container {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+    
 }
 
 .newpod-container {
@@ -50,7 +67,7 @@
     background-color: mistyrose;
     width: 100%; 
     flex-wrap: wrap;
-    
+    margin-bottom: 30px;
 }
 
 .newartwork {
@@ -61,20 +78,23 @@
 
 .text-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-content: center;
     margin-left: 30px;
     flex-wrap: wrap;
 
-}
 
-.text-container p {
-    margin-right: 0px, 10px, 0px, 10px;
 }
 
 .newtext {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     
+}
+
+.newtext p {
+    padding-left: 10px;
+    padding-right: 10px;
 }
